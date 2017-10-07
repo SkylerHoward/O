@@ -10,9 +10,9 @@ def main():
 	elapsed = time.mktime(ctt) - weather['time']
 	if elapsed < 600:
 		return weather['weather']
-	API_key = "f2d01b6b3adb89fd3790b24f27b846bc"
+	API_key = "API_KEY"
 	owm = pyowm.OWM(API_key)
-	observation = owm.weather_at_place('Gosford, AU')
+	observation = owm.weather_at_place('LOCATION')
 	w = observation.get_weather()
 	temp_list = [w.get_temperature('celsius'), w.get_temperature()]
 	weather['weather'] = temp_list
